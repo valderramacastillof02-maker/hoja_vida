@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Hoja de Vida</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Librería para generar PDF -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+
+    <!-- Iconos Bootstrap -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+
+    <style>
+        body{
+            background: linear-gradient(to right, #000000, #2a5298);
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        .contenedor{
+            margin-top: 40px;
+            margin-bottom: 40px;
+        }
+
+        .perfil{
+            background-color: #f0f0f0;
+            color: #000;
+            border-radius: 15px;
+            padding: 30px;
+            text-align: center;
+        }
+
+        .perfil img{
+            width: 200px;
+            height: 250px;
+            object-fit: cover;
+            border-radius: 50%;
+            border: 5px solid #fff;
+        }
+
+        /* TITULOS MAS OSCUROS Y GRUESOS */
+        .titulo-seccion{
+            color: #000;
+            font-weight: 900;
+            border-bottom: 3px solid #000;
+            padding-bottom: 5px;
+            margin-bottom: 20px;
+        }
+
+        .perfil h5{
+            font-weight: 900;
+            color: #000;
+        }
+
+        .seccion{
+            background-color: #ffffff;
+            border-radius: 15px;
+            padding: 25px;
+            margin-bottom: 20px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .progress{
+            height: 12px;
+        }
+
+        .btn-pdf{
+            background-color: #ffffff;
+            color: #000;
+            border-radius: 20px;
+            font-weight: bold;
+        }
+
+        .btn-pdf:hover{
+            background-color: #d8d8d8;
+        }
+
+        /* ESTILO LINKS CONTACTO */
+        .contacto a{
+            text-decoration: none;
+            color: #000;
+            font-weight: bold;
+        }
+
+        .contacto a:hover{
+            color: #2a5298;
+        }
+
+    </style>
+</head>
+<body>
+
+<div class="container contenedor">
+    <div class="row">
+
+        <!-- COLUMNA IZQUIERDA -->
+        <div class="col-md-4">
+            <div class="perfil">
+                <img src="img/Mi foto.jpeg" 
+                     class="img-fluid mb-3" 
+                     alt="Faiber Steven Valderrama Castillo">
+
+                <h2 class="fw-bold">Faiber Steven Valderrama Castillo</h2>
+                <p>Bachiller Académico</p>
+                <p>Técnico en Programación de Software</p>
+                <p>Técnico en Producción Cafetera Profesional</p>
+                <p>Ex alumno del pre-icfes en juventud manizaleña</p>
+
+                <hr>
+
+                <h5>Contacto</h5>
+
+                <div class="contacto">
+        <!-- WHATSAPP -->
+        <p>
+    <i class="bi bi-whatsapp"></i> 
+    <a href="https://wa.me/573146198129?text=Hola%20Faiber,%20vi%20tu%20hoja%20de%20vida%20y%20quiero%20contactarte." target="_blank">
+        Enviar mensaje por WhatsApp
+    </a>
+</p>
+
+       <!-- CORREO -->
+<p>
+    <i class="bi bi-envelope-fill"></i> 
+    <a href="mailto:valderramacastillof02@gmail.com?subject=Interesado%20en%20tu%20perfil&body=Hola%20Faiber,%20vi%20tu%20hoja%20de%20vida%20y%20me%20interesa%20tu%20perfil.">
+        Enviar correo electrónico
+    </a>
+</p>
+
+        <!-- FACEBOOK -->
+<p>
+    <i class="bi bi-facebook"></i> 
+    <a href="https://www.facebook.com/share/1JQndfqH2J/" target="_blank">
+        Ir a mi Facebook
+    </a>
+</p>
+                </div>
+
+                <hr>
+
+                <h5><i class="bi bi-code-slash"></i> Habilidades</h5>
+
+                <p>HTML/CSS 70%</p>
+                <div class="progress mb-2">
+                    <div class="progress-bar bg-info" style="width:70%"></div>
+                </div>
+
+                <p>Inglés 80%</p>
+                <div class="progress mb-2">
+                    <div class="progress-bar bg-info" style="width:80%"></div>
+                </div>
+
+                <p>Visual Studio Code 70%</p>
+                <div class="progress mb-2">
+                    <div class="progress-bar bg-info" style="width:70%"></div>
+                </div>
+
+                <p>MySQL 70%</p>
+                <div class="progress mb-2">
+                    <div class="progress-bar bg-info" style="width:70%"></div>
+                </div>
+
+                <p>PHP 70%</p>
+                <div class="progress">
+                    <div class="progress-bar bg-info" style="width:70%"></div>
+                </div>
+            </div>
+        </div>
+
+        <!-- COLUMNA DERECHA -->
+        <div class="col-md-8">
+
+            <div class="seccion">
+                <h4 class="titulo-seccion">
+                    <i class="bi bi-briefcase-fill"></i> Experiencia Laboral
+                </h4>
+
+                <div class="card mb-3">
+                    <div class="card-body">
+                        <h5 class="card-title fw-bold">Aprendiz SENA</h5>
+                        <p class="text-muted">Julio 2026 - Noviembre 2026</p>
+                        <p>Aprendiz en Técnico en Programación de Software.</p>
+                        <p>Durante la etapa productiva como aprendiz del Servicio Nacional de Aprendizaje (SENA), participé activamente en el desarrollo de actividades relacionadas con mi área de formación, aplicando los conocimientos adquiridos en el proceso académico. Apoyé tareas técnicas y administrativas, fortaleciendo competencias como el trabajo en equipo, la responsabilidad, la comunicación efectiva y la solución de problemas. Esta experiencia me permitió adquirir habilidades prácticas en un entorno laboral real, contribuyendo al cumplimiento de metas y al mejoramiento continuo de mis capacidades profesionales.</p>
+                        <p>Aprendiz en Técnico en Producción Cafetera.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="seccion">
+                <h4 class="titulo-seccion">
+                    <i class="bi bi-mortarboard-fill"></i> Educación
+                </h4>
+
+                <div class="card mb-3">
+                    <div class="card-body">
+                        <h5 class="fw-bold">Técnico en Programación de Software</h5>
+                        <p class="text-muted">SENA - 2304 horas</p>
+                    </div>
+                </div>
+
+                 <div class="card mb-3">
+                    <div class="card-body">
+                        <h5 class="fw-bold">titulos en cursos de ingles como proedu y confa</h5>
+                        <p class="text-muted">3 AÑOS</p>
+                    </div>
+                </div>
+
+                <div class="card mb-3">
+                    <div class="card-body">
+                        <h5 class="fw-bold">Técnico en Producción Cafetera Profesional</h5>
+                        <p class="text-muted">2 años</p>
+                    </div>
+                </div>
+
+            </div>
+
+<div class="text-center">
+    <button class="btn btn-pdf px-4 py-2 me-2" onclick="descargarPDF()">
+        <i class="bi bi-file-earmark-pdf-fill"></i> Descargar en PDF
+    </button>
+
+    <button class="btn btn-pdf px-4 py-2" onclick="compartirPDF()">
+        <i class="bi bi-share-fill"></i> Compartir
+    </button>
+</div>
+
+        </div>
+
+    </div>
+</div>
+
+<script>
+function descargarPDF() {
+    const elemento = document.body;
+    html2pdf().from(elemento).save("Hoja_de_Vida_Faiber_Steven_Valderrama.pdf");
+}
+
+function compartirPDF() {
+    if (navigator.share) {
+        navigator.share({
+            title: "Hoja de Vida - Faiber Steven",
+            text: "Te comparto mi hoja de vida.",
+            url: window.location.href
+        });
+    } else {
+        alert("Tu navegador no permite compartir automáticamente.");
+    }
+}
+</script>
+
+</body>
+</html>
